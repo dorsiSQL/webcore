@@ -104,6 +104,21 @@ textarea {
   font: inherit;
 }
 
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  color: white;
+  margin-top: 8px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
 .app-shell {
   min-height: 100vh;
   overflow-x: hidden;
