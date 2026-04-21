@@ -35,15 +35,6 @@ const projects = [
     status: 'Próximo',
     image: '/images/project4.svg',
   },
-  {
-    id: 5,
-    name: 'Culo de Kira',
-    description:
-      'Sitio web personalizado para negocio local con enfoque en presencia digital, identidad visual consistente y mejor presentación online.',
-    technologies: ['React', 'Vite'],
-    status: 'Próximo',
-    image: '/images/project4.svg',
-  },
 ]
 
 function Projects() {
