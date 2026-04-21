@@ -1,36 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap');
+
 :root {
-  --bg: #090909;
-  --bg-soft: #111111;
-  --panel: #141414;
-  --panel-2: #1a1a1a;
-  --line: rgba(255, 255, 255, 0.08);
+  /* ── Tipografía ── */
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Syne', sans-serif;
+
+  /* ── Fondos ── */
+  --bg:       #090909;
+  --bg-soft:  #111111;
+  --panel:    #141414;
+  --panel-2:  #1a1a1a;
+
+  /* ── Bordes ── */
+  --line:        rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 59, 59, 0.24);
-  --text: #f4f4f4;
-  --muted: #a7a7a7;
+
+  /* ── Texto ── */
+  --text:    #f4f4f4;
+  --muted:   #a7a7a7;
   --muted-2: #cfcfcf;
-  --accent: #ff3b3b;
+
+  /* ── Acento ── */
+  --accent:      #ff3b3b;
   --accent-soft: rgba(255, 59, 59, 0.12);
-  --radius: 20px;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --grad-accent: linear-gradient(135deg, #ff3b3b 0%, #ff7b3b 100%);
+
+  /* ── Espaciado (escala 8px) ── */
+  --space-1:  8px;
+  --space-2:  16px;
+  --space-3:  24px;
+  --space-4:  32px;
+  --space-6:  48px;
+  --space-8:  64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* ── Layout ── */
+  --max-width:     1180px;
+  --container-pad: clamp(1rem, 5vw, 3rem);
+  --radius:        20px;
+
+  /* ── Sombras ── */
+  --shadow:     0 20px 60px rgba(0, 0, 0, 0.35);
   --shadow-red: 0 16px 40px rgba(255, 59, 59, 0.14);
-  --max-width: 1180px;
+
+  /* ── Tipografía fluida ── */
+  --text-sm:   clamp(0.8rem,  1vw,   0.9rem);
+  --text-base: clamp(0.95rem, 1.2vw, 1rem);
+  --text-lg:   clamp(1.1rem,  1.5vw, 1.25rem);
+  --text-xl:   clamp(1.5rem,  3vw,   2rem);
+  --text-2xl:  clamp(2rem,    5vw,   3.5rem);
+  --text-3xl:  clamp(2.5rem,  7vw,   5rem);
 }
 
-* {
+/* ── Reset base ── */
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ── Base ── */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Tipografía display ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+/* ── Tipografía fluida aplicada ── */
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl);  }
+p  { font-size: var(--text-base); color: var(--muted); }
+
+/* ── Scroll ── */
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(255, 59, 59, 0.06), transparent 30%),
-    linear-gradient(180deg, #080808 0%, #0a0a0a 100%);
-  color: var(--text);
+  scroll-padding-top: 80px;
 }
 
 img {
